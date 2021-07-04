@@ -39,13 +39,13 @@ displayWeather: function(data) {
     document.querySelector(".temp").innerText = temp+"°C"; 
     document.querySelector(".feels-like").innerText = "Feels like "+feels_like+"°C"; 
     if (temp_min !== temp_max){
-        document.querySelector(".min-max-temp").innerText =  temp_min + "-" + temp_max+ "°C"; 
+        document.querySelector(".min-max-temp").innerText =  "Min-Max "+temp_min + "-" + temp_max+ "°C"; 
     }
     else{
         document.querySelector(".min-max-temp").style.display = "none" ; 
     }
     
-    document.querySelector(".icon").src =  "https://openweathermap.org/img/wn/" + icon + ".png"; 
+    document.querySelector(".icon").src =  "https://openweathermap.org/img/wn/" + icon + ".png";  
     document.querySelector(".desc").innerText = description; 
     document.querySelector(".humidity").innerText = "Humidity: "+humidity+" %";
     document.querySelector(".wind").innerText = "Wind Speed: "+speed+" km/h";
@@ -69,10 +69,10 @@ submit.addEventListener("click", function(event){
   }
     
 })
-document.querySelector(".city").addEventListener("keyup", function(event){
-    if (event.key=="Enter"){
+document.querySelector('#city').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
         weather.searchWeather();
     }
-})
+});
 
  weather.fetchWeather("London");

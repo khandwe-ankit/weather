@@ -10,8 +10,8 @@ h1{
 .logo{
     color: #ffffff;
     background: #000000d0;
-    padding: 5px 30px;
-    border-radius: 20px;
+    padding: 20px 30px;
+    border-radius: 100px;
     width:96%;
     overflow: hidden;
 }
@@ -93,6 +93,7 @@ footer{
     text-align: center;
     width:97%;
     font-size: 1.4rem;
+    border-radius: 100px;
     
 }
 
@@ -114,6 +115,7 @@ footer{
     footer{
         margin-top: 3rem;
         position: relative;
-        width: fit-content;  
+        width: fit-content;
+        border-radius: 0;  
     }
 }

@@ -24,6 +24,8 @@ displayWeather: function(data) {
         window.alert("Please enter a city");
         else if(message==="city not found")
         window.alert("City not found, Please try a different city" )
+        else
+        window.alert(message);
     }
     else{
         const {name} = data;
@@ -32,14 +34,22 @@ displayWeather: function(data) {
     const {temp, temp_min, temp_max, feels_like,humidity} = data.main;
     const {speed} = data.wind;
     
-    console.log(cod,name,icon,description,speed,temp,temp_min, temp_max);
+    //console.log(cod,name,icon,description,speed,temp,temp_min, temp_max);
     document.querySelector(".place").innerText = "Weather in "+name+", "+country; 
     document.querySelector(".temp").innerText = temp+"°C"; 
-    document.querySelector(".min-max-temp").innerText =  temp_min + "-" + temp_max+ "°C"; 
+    document.querySelector(".feels-like").innerText = "Feels like "+feels_like+"°C"; 
+    if (temp_min !== temp_max){
+        document.querySelector(".min-max-temp").innerText =  temp_min + "-" + temp_max+ "°C"; 
+    }
+    else{
+        document.querySelector(".min-max-temp").style.display = "none" ; 
+    }
+    
     document.querySelector(".icon").src =  "https://openweathermap.org/img/wn/" + icon + ".png"; 
     document.querySelector(".desc").innerText = description; 
+    document.querySelector(".humidity").innerText = "Humidity: "+humidity+" %";
     document.querySelector(".wind").innerText = "Wind Speed: "+speed+" km/h";
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/1920x1080/?"+name+"')"
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1930x1080/?"+name+"')"
     }
     },
     searchWeather: function(){

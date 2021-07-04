@@ -10,24 +10,25 @@
     <!-- <script src="JS/app.js"></script>
 </head> -->
 <body>
-    <h1 class="logo">Ankit Weather Check</h1>
+    <h1 class="logo">Quick Weather Check</h1>
     <div class="city-input container">
         <form id="input" method="post">
         <input type="text" id="city" class="city" placeholder="Enter city" required="true"> 
-        <input type="button" id="submit" class="submit" value="Submit">
+        <input type="button" id="submit" class="submit" value="Search">
         <!-- <button class="submit" id="submit" onsubmit="call_locker()"></button> -->
     </form>
     </div>
     <div class="output container">
         <div class="display-result">
             <h2 class="place" id="place"></h2>
-            <h3 class="temp"></h3>
+            <h1 class="temp"></h1>
+            <span class="feels-like"></span>
             <p class="min-max-temp"></p>
             <div class="flex">
                 <img src="https://openweathermap.org/img/wn/04n.png" alt="weather icon" class="icon">
                 <div class="desc"></div>
             </div>
-            
+            <p class="humidity"></p>
             <p class="wind"></p>
         </div>
     </div>

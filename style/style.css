@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 h1{
     margin-top: 0;
     font-family: 'Lato', sans-serif;
@@ -11,8 +15,8 @@ h1{
     color: #ffffff;
     background: #000000d0;
     padding: 20px 30px;
-    border-radius: 100px;
-    width:96%;
+
+    width:100%;
     overflow: hidden;
 }
 body{
@@ -91,18 +95,14 @@ footer{
     color: #ffffff;
     background: #0A1D37;
     text-align: center;
-    width:97%;
+    width:100%;
     font-size: 1.4rem;
-    border-radius: 100px;
+    
     
 }
 
 /* Media Queries */
 @media(max-width:768px){
-    .logo{
-        width: fit-content;
-        border-radius: 0;
-    }
     .submit {
         margin-top: 15px;
     }
@@ -115,7 +115,26 @@ footer{
     footer{
         margin-top: 3rem;
         position: relative;
-        width: fit-content;
+        bottom: 0;
         border-radius: 0;  
     }
 }
+@media(min-width:1400px){
+    input{
+        font-size: 1.2rem;
+    }
+    .city{
+        width: 40rem;
+        height: 2.5rem;    
+    }
+    .submit{
+        width: 10rem;
+        height: 2.5rem;
+    }
+
+    .output{
+        margin-top: 10rem;
+        transform: scale(1.5);
+    }
+}
+

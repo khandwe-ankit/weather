@@ -23,7 +23,7 @@ displayWeather: function(data) {
         if(message==="Nothing to geocode")
         window.alert("Please enter a city");
         else if(message==="city not found")
-        window.alert("City not found, Please try a different city" )
+        window.alert("City not found, Please check the spelling or try a different city" )
         else
         window.alert(message);
     }
@@ -53,16 +53,21 @@ displayWeather: function(data) {
     }
     },
     searchWeather: function(){
-        this.fetchWeather(document.querySelector(".city").value);
+        if (document.querySelector(".city").value !== ""){
+            this.fetchWeather(document.querySelector(".city").value);
+        }
+        else
+        window.alert("Please enter a city");
     }
 };
 //var submit = document.querySelector(".submit");
  var submit= document.getElementById('submit');
-
-submit.addEventListener("click", function(event){
-    if (document.querySelector(".city").value === undefined ) 
+    submit.addEventListener("click", function(event){
+        
+    if (document.querySelector(".city").value === "" ) 
   {
     event.preventDefault();
+    window.alert("Please enter a city");
   }
   else{
     weather.searchWeather();
@@ -76,3 +81,5 @@ document.querySelector('#city').addEventListener('keypress', function (event) {
 });
 
  weather.fetchWeather("London");
+
+ //$("#favicon").attr("href","https://openweathermap.org/img/wn/" + icon + ".png");

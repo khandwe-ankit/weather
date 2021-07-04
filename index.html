@@ -9,8 +9,8 @@
     <meta name="description" content="Weather forecast, quick & easy no ads.">
     <link rel="stylesheet" href="style/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://openweathermap.org/img/wn/04d.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://openweathermap.org/img/wn/04d.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://openweathermap.org/img/wn/04d.png">
+    <link rel="icon" id="favicon" type="image/png" sizes="32x32" href="https://openweathermap.org/img/wn/04d.png">
+    <link rel="icon" id="favicon" type="image/png" sizes="16x16" href="https://openweathermap.org/img/wn/04d.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <script src="JS/script.js" defer></script>
     
@@ -19,7 +19,7 @@
     <h1 class="logo">Quick Weather Check</h1>
     <div class="city-input container">
         <!-- <form id="input" method="post"></form> -->
-        <input type="text" id="city" class="city" placeholder="Enter city" required="true"> 
+        <input type="text" id="city" class="city" placeholder="Enter city" onfocus="this.placeholder=''" onblur="this.placeholder='Please enter any city to search'" required="true"> 
         <input type="button" id="submit" class="submit" value="Search">
         <!-- <button class="submit" id="submit" onsubmit="call_locker()"></button> -->
     <!-- </form> -->

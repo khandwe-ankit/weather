@@ -102,9 +102,16 @@ footer{
 }
 
 /* Media Queries */
-@media(max-width:360px),(max-height:710px){
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    
+    }
+
+@media screen and (max-width: 767px) {
+/* start of medium tablet styles */
     .submit {
         margin-top: 15px;
+        width: 6rem;
     }
     .city{
         width: 15rem;
@@ -114,27 +121,14 @@ footer{
     }
     footer{
         position: relative;
-        margin-top: 3rem;
+        margin-top: 14rem;
         bottom: 0; 
     }
 }
 
-@media(min-width:1400px){
-    input{
-        font-size: 1.2rem;
-    }
-    .city{
-        width: 40rem;
-        height: 2.5rem;    
-    }
-    .submit{
-        width: 10rem;
-        height: 2.5rem;
-    }
 
-    .output{
-        margin-top: 10rem;
-        transform: scale(1.5);
-    }
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    
 }
 

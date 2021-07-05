@@ -72,7 +72,7 @@ input{
     color: #ffffff;
     background: #000000d0;
     border-radius: 50px;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 .flex{
@@ -88,7 +88,7 @@ input{
 
 /* footer */
 footer{
-    position: absolute;
+    position:fixed;
     bottom: 0;
     margin-top: 20px;
     padding: 20px;
@@ -102,7 +102,7 @@ footer{
 }
 
 /* Media Queries */
-@media(max-width:768px){
+@media(max-width:360px),(max-height:710px){
     .submit {
         margin-top: 15px;
     }
@@ -110,15 +110,15 @@ footer{
         width: 15rem;
     }
     .output{
-        padding: .75rem;
+        padding: 1rem;
     }
     footer{
-        margin-top: 3rem;
         position: relative;
-        bottom: 0;
-        border-radius: 0;  
+        margin-top: 3rem;
+        bottom: 0; 
     }
 }
+
 @media(min-width:1400px){
     input{
         font-size: 1.2rem;

@@ -5,13 +5,6 @@ let weather = {
         + city 
         +"&units=metric&appid="
         + this.apiKey)
-        // .then((response) => {
-        //     if (response.status >= 400 && response.status < 600) {
-        //       window.alert("Wrong city")
-              
-        //     }
-        //     return response;
-        // })
         .then((response) => response.json())
         .then((data) => this.displayWeather(data));
     },
@@ -79,6 +72,8 @@ document.querySelector('#city').addEventListener('keypress', function (event) {
         weather.searchWeather();
     }
 });
+
+document.querySelector('#current-year').innerHTML = new Date().getFullYear();
 
  weather.fetchWeather("London");
 

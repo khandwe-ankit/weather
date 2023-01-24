@@ -46,8 +46,9 @@ let weather = {
         }
     },
     searchWeather: function () {
-        if (document.querySelector(".city").value !== "") {
-            this.fetchWeather(document.querySelector(".city").value);
+        const city = document.querySelector(".city").value.trim();
+        if ( city !== "") {
+            this.fetchWeather(city);
         }
         else
             window.alert("Please enter a city");

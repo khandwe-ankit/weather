@@ -47,26 +47,18 @@ let weather = {
     },
     searchWeather: function () {
         const city = document.querySelector(".city").value.trim();
-        if ( city !== "") {
+        if (city !== "") {
             this.fetchWeather(city);
         }
         else
             window.alert("Please enter a city");
     }
 };
-//var submit = document.querySelector(".submit");
-var submit = document.getElementById('submit');
-submit.addEventListener("click", function (event) {
 
-    if (document.querySelector(".city").value === "") {
-        event.preventDefault();
-        window.alert("Please enter a city");
-    }
-    else {
-        weather.searchWeather();
-    }
-
+document.getElementById('submit').addEventListener("click", function (event) {
+    weather.searchWeather();
 })
+
 document.querySelector('#city').addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         weather.searchWeather();

@@ -47,11 +47,11 @@ let weather = {
     },
     searchWeather: function () {
         const city = document.querySelector(".city").value.trim();
+        document.querySelector(".city").value = city;
         if (city !== "") {
             this.fetchWeather(city);
         }
         else {
-            document.querySelector(".city").value = city;
             window.alert("Please enter a city");
         }
     }

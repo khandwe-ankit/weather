@@ -51,7 +51,7 @@ let weather = {
             this.fetchWeather(city);
         }
         else {
-            document.querySelector(".city").value = "";
+            document.querySelector(".city").value = city;
             window.alert("Please enter a city");
         }
     }
